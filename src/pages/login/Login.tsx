@@ -6,7 +6,6 @@ import { Link } from 'react-router';
 import RaisedButton from 'material-ui/RaisedButton';
 import { StateProps, DispatchProps, OwnProps } from './_login';
 import { browserHistory } from 'react-router';
-const logo = require('../../assets/logo/complete-white.svg');
 
 export type Props = StateProps & OwnProps & DispatchProps;
 
@@ -32,11 +31,12 @@ export default class Login extends React.Component<Props, {}> {
       <section className="public-pages">
         <div className="login">
           <div className="logo-wrap">
-            <img src={logo} alt="logo" className="logo" />
+            {/* <img src={logo} alt="logo" className="logo" /> */}
+            <p>This will be the logo</p>
           </div>
           <div className="box-content">
             <div className="box-header">
-              <h6 className="h6">Log into your account</h6>
+              <h6 className="h6">Log in</h6>
             </div>
             <form onSubmit={handleSubmit(this.submitForm)}>
               {auth.loginError && (
@@ -56,7 +56,7 @@ export default class Login extends React.Component<Props, {}> {
                 <Field
                   component={TextField}
                   floatingLabelFixed={true}
-                  floatingLabelText={'Email'}
+                  floatingLabelText={'E-mail:'}
                   fullWidth={true}
                   name="email"
                   className="input-wrapper input"
@@ -67,7 +67,7 @@ export default class Login extends React.Component<Props, {}> {
                   type="password"
                   component={TextField}
                   floatingLabelFixed={true}
-                  floatingLabelText={'Password'}
+                  floatingLabelText={'Password:'}
                   fullWidth={true}
                   name="password"
                   className="input-wrapper input"
@@ -84,7 +84,7 @@ export default class Login extends React.Component<Props, {}> {
           </div>
           <footer>
             <Link to="/register" activeClassName="active">Register</Link>
-            <Link to="/resetPassword" activeClassName="active">*Reset password</Link>
+            <Link to="/resetPassword" activeClassName="active">Reset password</Link>
           </footer>
         </div>
       </section>

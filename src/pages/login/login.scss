@@ -10,6 +10,9 @@
     color: #6b7c93;
     text-align: center;
     border-bottom: 1px solid #f7f7f7;
+    h6 {
+      font-size: 12px;
+    }
   }
   .input-wrap {
     margin-bottom: 10px;
@@ -17,10 +20,14 @@
   footer {
     padding: 20px;
     font-size: 12px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     background-color: #eee;
+    display: grid;
+    grid-template-columns: repeat(autofit, 1fr);
+    grid-auto-flow: column;
+    a {
+      text-align: center;
+      text-decoration: none;
+    }
   }
   .styledRouterLink {
     color: #333;

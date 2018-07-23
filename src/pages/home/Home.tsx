@@ -1,6 +1,9 @@
 import * as React from 'react';
 import { StateProps, DispatchProps, OwnProps } from './_home';
-import { Box, Flex } from 'grid-styled';
+
+import { TextField } from 'redux-form-material-ui';
+
+import IconButton from 'material-ui/IconButton';
 
 export type Props = StateProps & OwnProps & DispatchProps;
 
@@ -12,25 +15,18 @@ export default class Home extends React.PureComponent<Props, {}> {
 
   render() {
     return (
-      <div className="Home">
+      <div className="Home container">
         <h1 className="page-header">Home page</h1>
         <button onClick={this.logout}>Logout</button>
-        <Flex className="page-content">
-          <Box width={1} p={20}>
-            <h2>Box</h2>
-          </Box>
-          <Box width={1} p={20}>
-            <h2>Box</h2>
-          </Box>
-        </Flex>
-        <Flex className="page-content">
-          <Box width={1} p={20}>
-            <h2>Box</h2>
-          </Box>
-          <Box width={1} p={20}>
-            <h2>Box</h2>
-          </Box>
-        </Flex>
+        <form className="form">
+              <div className="input-wrap">
+              <input type="text"/>
+                <TextField />
+                <IconButton className="addButton" aria-label="Add" type="submit">
+                  bla
+                </IconButton>
+              </div>
+            </form>   
       </div>
     );
   }

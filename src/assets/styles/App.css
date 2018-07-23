@@ -50,15 +50,20 @@
     color: #6b7c93;
     text-align: center;
     border-bottom: 1px solid #f7f7f7; }
+    .login .box-header h6 {
+      font-size: 12px; }
   .login .input-wrap {
     margin-bottom: 10px; }
   .login footer {
     padding: 20px;
     font-size: 12px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: #eee; }
+    background-color: #eee;
+    display: grid;
+    grid-template-columns: repeat(autofit, 1fr);
+    grid-auto-flow: column; }
+    .login footer a {
+      text-align: center;
+      text-decoration: none; }
   .login .styledRouterLink {
     color: #333;
     text-decoration: none;
@@ -278,6 +283,6 @@ span {
 .public-pages {
   display: flex;
   flex: 1;
-  background: gainsboro;
+  background: ghostwhite;
   justify-content: center;
   align-items: center; }
